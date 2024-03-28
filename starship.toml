@@ -86,6 +86,9 @@ truncation_symbol = "…/"
 "Music" = "󰝚 "
 "Pictures" = " "
 "Developer" = "󰲋 "
+"adenauer" = " "
+"arbitrator" = "󰦻 "
+".config" = " "
 
 [git_branch]
 symbol = ""
@@ -102,4 +105,5 @@ disabled = false
 [character]
 disabled = false
 success_symbol = '[](bold fg:green)'
-error_symbol = '[](bold fg:red)'
+error_symbol = '[](bold fg:red)'
+
