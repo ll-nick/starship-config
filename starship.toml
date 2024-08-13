@@ -10,6 +10,7 @@ $directory\
 [](fg:peach bg:blue)\
 $git_branch\
 $git_status\
+$conda\
 [ ](fg:blue)\
 $line_break\
 $character"""
@@ -106,6 +107,10 @@ format = '[[ $symbol $branch ](fg:base bg:blue)]($style)'
 [git_status]
 style = "bg:teal"
 format = '[[($all_status$ahead_behind )](fg:base bg:blue)]($style)'
+
+[conda]
+style = "fg:base bg:blue"
+format = "[via $symbol$environment]($style)"
 
 [line_break]
 disabled = false
