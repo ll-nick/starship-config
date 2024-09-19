@@ -5,9 +5,9 @@ format = """
 $os\
 $username\
 $hostname\
-[](bg:peach fg:surface0)\
+[](bg:peach fg:surface0)\
 $directory\
-[](fg:peach bg:blue)\
+[](fg:peach bg:blue)\
 $git_branch\
 $git_status\
 $conda\
