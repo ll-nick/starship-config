@@ -4,7 +4,8 @@ format = """
 ($username$hostname[| ](bg:base fg:text))\
 $directory\
 ([|](bg:base fg:text)$git_branch$git_status)\
-([|](bg:base fg:text)$conda)\
+$fill \
+([](fg:surface0)$conda[](fg:surface0))\
 $line_break\
 $character"""
 
@@ -74,9 +75,12 @@ symbol = ""
 format = '[[($all_status$ahead_behind )](bg:base fg:blue)]($style)'
 style = "bg:base"
 
+[fill]
+symbol = " "
+
 [conda]
-format = "[ $symbol$environment]($style)"
-style = "bg:base fg:text"
+format = "[$symbol$environment]($style)"
+style = "bg:surface0 fg:text"
 symbol = " "
 
 [character]
