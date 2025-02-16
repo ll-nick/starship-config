@@ -1,17 +1,10 @@
 "$schema" = 'config-schema.json'
 
 format = """
-[](surface0)\
-$os\
-$username\
-$hostname\
-[](bg:peach fg:surface0)\
+($username$hostname[| ](bg:base fg:text))\
 $directory\
-[](fg:peach bg:blue)\
-$git_branch\
-$git_status\
-$conda\
-[ ](fg:blue)\
+([|](bg:base fg:text)$git_branch$git_status)\
+([|](bg:base fg:text)$conda)\
 $line_break\
 $character"""
 
@@ -45,47 +38,20 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-[os]
-disabled = false
-style = "bg:surface0 fg:text"
-
-[os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = ""
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
-
 [username]
-show_always = true
-style_user = "bg:surface0 fg:text"
-style_root = "bg:surface0 fg:text"
-format = '[ $user ]($style)'
+format = '[ $user ]($style)'
+style_root = "bg:base fg:bold rosewater"
+style_user = "bg:base fg:bold rosewater"
 
 [hostname]
-ssh_only = true
 format = "[󰁥 $hostname ]($style)"
+ssh_only = true
+style = "bg:base fg:bold rosewater"
 trim_at = '.companyname.com'
-disabled = false
-style = "bg:surface0 fg:text"
 
 [directory]
-style = "fg:mantle bg:peach"
-format = "[ $path ]($style)"
+format = "[  $path ]($style)"
+style = "bg:base fg:peach"
 truncation_length = 5
 truncation_symbol = "…/"
 
@@ -100,23 +66,20 @@ truncation_symbol = "…/"
 "/.config" = "/ "
 
 [git_branch]
+format = '[[ $symbol $branch ](bg:base fg:blue)]($style)'
+style = "bg:base"
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol $branch ](fg:base bg:blue)]($style)'
 
 [git_status]
-style = "bg:teal"
-format = '[[($all_status$ahead_behind )](fg:base bg:blue)]($style)'
+format = '[[($all_status$ahead_behind )](bg:base fg:blue)]($style)'
+style = "bg:base"
 
 [conda]
-style = "fg:base bg:blue"
-format = "[via $symbol$environment]($style)"
-
-[line_break]
-disabled = false
+format = "[ $symbol$environment]($style)"
+style = "bg:base fg:text"
+symbol = " "
 
 [character]
-disabled = false
-success_symbol = '[](bold fg:green)'
 error_symbol = '[](bold fg:red)'
+success_symbol = '[](bold fg:green)'
 
