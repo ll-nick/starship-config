@@ -7,6 +7,7 @@ $directory\
 ([|](bg:base fg:text)$jobs)\
 $fill \
 ([](fg:surface0)$conda[](fg:surface0))\
+([](fg:surface0)$container[](fg:surface0))\
 $line_break\
 $character"""
 
@@ -88,6 +89,11 @@ symbol = " "
 format = "[$symbol$environment]($style)"
 style = "bg:surface0 fg:text"
 symbol = " "
+
+[container]
+format = "[$symbol$name]($style)"
+style = "bg:surface0 fg:text"
+symbol = " "
 
 [character]
 error_symbol = '[](bold fg:red)'
