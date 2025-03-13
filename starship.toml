@@ -6,10 +6,11 @@ $directory\
 ([|](bg:base fg:text)$git_branch$git_status)\
 ([|](bg:base fg:text)$jobs)\
 $fill \
-([](fg:surface0)$conda[](fg:surface0))\
-([](fg:surface0)$container[](fg:surface0))\
+([](fg:surface0)$conda[](fg:surface0) )\
+([](fg:surface0)$container[](fg:surface0) )\
 $line_break\
-$character"""
+$character
+"""
 
 palette = 'catppuccin_mocha'
 
