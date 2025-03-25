@@ -60,14 +60,10 @@ truncation_length = 5
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
-"/adenauer" = "/ "
 "/arbitrator" = "/󰦻 "
+"/citi" = "/ "
 "/.config" = "/ "
+"/downloads" = "/ "
 
 [git_branch]
 format = '[[ $symbol $branch ](bg:base fg:blue)]($style)'
