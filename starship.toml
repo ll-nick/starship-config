@@ -49,7 +49,8 @@ style_user = "bg:base fg:bold rosewater"
 
 [hostname]
 format = "[󰁥 $hostname ]($style)"
-ssh_only = true
+ssh_only = false
+detect_env_vars = ["SSH_CONNECTION", "SSH_CLIENT", "SSH_TTY", "DISTROBOX_ENTER_PATH"]
 style = "bg:base fg:bold rosewater"
 trim_at = '.companyname.com'
 
