@@ -6,6 +6,7 @@ $directory\
 ([|](bg:base fg:text)$git_branch$git_status)\
 ([|](bg:base fg:text)$jobs)\
 $fill \
+([](fg:surface0)$python[](fg:surface0) )\
 ([](fg:surface0)$conda[](fg:surface0) )\
 ([](fg:surface0)$container[](fg:surface0) )\
 $line_break\
@@ -82,6 +83,11 @@ style = "bg:base fg:red"
 
 [fill]
 symbol = " "
+
+[python]
+symbol = " "
+format = '[${symbol}${pyenv_prefix}(${version})( | $virtualenv)]($style)'
+style = "bg:surface0 fg:text"
 
 [conda]
 format = "[$symbol$environment]($style)"
