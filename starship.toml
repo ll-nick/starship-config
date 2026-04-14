@@ -65,7 +65,7 @@ truncation_symbol = "…/"
 "/arbitrator" = "/󰦻 "
 "/citi" = "/ "
 "/.config" = "/ "
-"/downloads" = "/ "
+"/Downloads" = "/ "
 
 [git_branch]
 format = '[[ $symbol $branch ](bg:base fg:blue)]($style)'
